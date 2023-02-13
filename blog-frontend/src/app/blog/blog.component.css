@@ -1,0 +1,67 @@
+.titleContainer {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cardBlog {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    margin: 10px;
+    border-radius: 25px;
+    min-width: 300px !important;
+
+}
+
+.card-title {
+    margin-bottom: 0.3rem;
+    color: red;
+}
+
+.card-text {
+    text-overflow: ellipsis;
+    padding: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0;
+}
+
+.cat {
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.fa-users {
+    margin-left: 1rem;
+}
+
+a,
+i {
+    color: #17a2b8;
+    cursor: pointer;
+}
+
+.readMore {
+    padding-left: 10px;
+    background: transparent;
+    color: #17a2b8;
+    border: none;
+    text-decoration: underline;
+}
+
+.stats {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80px;
+    justify-content: space-evenly;
+}
+
+.card-footer {
+    font-size: 0.8rem;
+}
+
+.cardUpVotes {
+    border: 2px solid green;
+}
+
+.cardDownVotes {
+    border: 2px solid red;
+}

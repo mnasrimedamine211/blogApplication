@@ -1,0 +1,18 @@
+<div class="addBlogContent">
+    <h1>
+        Add Blog :
+    </h1>
+    <div [formGroup]="form" class="addBlog">
+        <label for="ftitle">Title:</label>
+        <input type="text" id="ftitle" name="title" placeholder="Title blog" formControlName="title">
+        <label for="ldescription">Description:</label>
+        <textarea type="text" id="ldescription" name="description" placeholder="Description blog"
+            formControlName="description"></textarea>
+        <label for="fauthor">Author:</label>
+        <input type="text" id="fauthor" name="author" placeholder="Author blog" formControlName="author">
+        <button class="actionButton" 
+        [disabled]="form.invalid"
+        (click)="onSubmit()"
+        > Add </button>
+    </div>
+</div>

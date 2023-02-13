@@ -1,0 +1,29 @@
+<div class="w-100">
+    <h1 class="titleContainer">{{title}}</h1>
+    <div class="row">
+        <div *ngFor=" let blog of (search && search.length > 0 ? filteredArray : ListBlog)" [ngClass]="{
+                ' cardUpVotes': blog.likes>blog.dislikes , 
+            ' cardDownVotes': blog.likes<blog.dislikes }" class="col-sm card cardBlog">
+            <div class="card-body">
+                <h4 class="card-title">{{blog.title}}</h4>
+                <p class="card-text">{{blog.description}}</p>
+                <button (click)="openBlog(blog._id)" class="readMore">read more</button>
+            </div>
+            <div class="card-footer text-muted d-flex justify-content-between bg-transparent border-top-0">
+                <div class="views">
+                    {{blog.author}}
+                </div>
+                <div class="stats">
+                    <span>{{blog.likes}}</span>
+                    <i class="fas fa-thumbs-up actionButton" (click)="like(blog._id)"></i>
+                    <i class="fas fa-thumbs-down actionButton" (click)='dislike(blog._id)'></i>
+                    <span>{{blog.dislikes}}</span>
+                </div>
+
+            </div>
+        </div>
+        <div *ngFor="let blog of ListBlog" class="col-sm"
+            style="background: transparent; min-width: 300px; margin: 10px;">
+        </div>
+    </div>
+</div>
