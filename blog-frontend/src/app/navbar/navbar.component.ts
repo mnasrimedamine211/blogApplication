@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { SearchService } from '../search.service';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -8,8 +8,8 @@ import { SearchService } from '../search.service';
 })
 export class NavbarComponent {
   inputValue = '';
-  constructor(private searchService: SearchService) {}
-  onValueChange(value: string ) {
+  constructor(private router: Router, private searchService: SearchService) { }
+  onValueChange(value: string) {
     this.inputValue = value;
     this.searchService.updateData(value);
   }
